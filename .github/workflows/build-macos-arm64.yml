@@ -42,15 +42,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          xcode_app="$(find /Applications -maxdepth 1 -type d -name 'Xcode_26*.app' -print | sort -V | tail -n 1)"
-          if [[ -z "$xcode_app" ]]; then
-            echo "No Xcode 26 installation found. Installed Xcode apps:"
-            find /Applications -maxdepth 1 -type d -name 'Xcode*.app' -print | sort -V
+          if ! command -v xcodebuild >/dev/null 2>&1; then
+            echo "xcodebuild is unavailable on this Namespace runner."
+            echo "Runner OS: $(uname -a)"
+            echo "PATH: $PATH"
             exit 1
           fi
-          echo "Selecting $xcode_app"
-          sudo xcode-select --switch "$xcode_app"
           xcodebuild -version
+          xcode-select -p
           xcodebuild -downloadComponent MetalToolchain
 
       - name: Set up Python
