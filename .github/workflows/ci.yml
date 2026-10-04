@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   code-check:
-    runs-on: namespace-profile-tunguntgtungsahurbrowser
+    runs-on: nscloud-ubuntu-24.04-amd64-8x16
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
@@ -43,7 +43,7 @@ jobs:
         run: ./devutils/run_devutils_tests.sh
 
   validate-config:
-    runs-on: namespace-profile-tunguntgtungsahurbrowser
+    runs-on: nscloud-ubuntu-24.04-amd64-8x16
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
@@ -57,7 +57,7 @@ jobs:
         run: ./devutils/validate_config.py
 
   validate-with-source:
-    runs-on: namespace-profile-tunguntgtungsahurbrowser
+    runs-on: nscloud-ubuntu-24.04-amd64-8x16
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
