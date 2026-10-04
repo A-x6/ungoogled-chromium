@@ -19,6 +19,7 @@ core/ungoogled-chromium/block-trk-and-subdomains.patch
 core/ungoogled-chromium/disable-gaia.patch
 core/ungoogled-chromium/disable-fonts-googleapis-references.patch
 core/ungoogled-chromium/disable-webstore-urls.patch
+core/ungoogled-chromium/rebrand-bolt.patch
 core/ungoogled-chromium/fix-learn-doubleclick-hsts.patch
 core/ungoogled-chromium/disable-webrtc-log-uploader.patch
 core/ungoogled-chromium/disable-ai.patch
