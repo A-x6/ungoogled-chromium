@@ -1,0 +1,43 @@
+# Rebrand visible Chromium product names as Bolt. Keep chrome:// URLs and
+# platform identity values unchanged.
+--- a/chrome/app/theme/chromium/BRANDING
++++ b/chrome/app/theme/chromium/BRANDING
+@@ -2,6 +2,6 @@
+ COMPANY_SHORTNAME=The Chromium Authors
+-PRODUCT_FULLNAME=Chromium
+-PRODUCT_SHORTNAME=Chromium
+-PRODUCT_INSTALLER_FULLNAME=Chromium Installer
+-PRODUCT_INSTALLER_SHORTNAME=Chromium Installer
++PRODUCT_FULLNAME=Bolt
++PRODUCT_SHORTNAME=Bolt
++PRODUCT_INSTALLER_FULLNAME=Bolt Installer
++PRODUCT_INSTALLER_SHORTNAME=Bolt Installer
+ COPYRIGHT=Copyright @LASTCHANGE_YEAR@ The Chromium Authors. All rights reserved.
+--- a/chrome/app/chromium_strings.grd
++++ b/chrome/app/chromium_strings.grd
+@@ -297 +297 @@
+-            Chromium
++            Bolt
+@@ -300 +300 @@
+-            Chromium
++            Bolt
+@@ -455 +455 @@
+-              <ph name="PAGE_TITLE">$1<ex>Google</ex></ph> - Chromium
++              <ph name="PAGE_TITLE">$1<ex>Google</ex></ph> - Bolt
+@@ -1186 +1186 @@
+-          Chromium
++          Bolt
+@@ -1189 +1189 @@
+-          Chromium Helper
++          Bolt Helper
+@@ -1192 +1192 @@
+-          Chromium Helper
++          Bolt Helper
+--- a/chrome/app/settings_chromium_strings.grdp
++++ b/chrome/app/settings_chromium_strings.grdp
+@@ -22 +22 @@
+-        About Chromium
++        About Bolt
+@@ -25 +25 @@
+-        Get help with Chromium
++        Get help with Bolt
