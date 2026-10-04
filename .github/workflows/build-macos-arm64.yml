@@ -15,7 +15,7 @@ permissions:
 jobs:
   build-macos-arm64:
     name: Build Apple Silicon DMG
-    runs-on: namespace-profile-tunguntgtungsahurbrowser
+    runs-on: nscloud-macos-tahoe-arm64-12x56
     timeout-minutes: 360
 
     steps:
@@ -39,18 +39,8 @@ jobs:
         run: cp -a .github/scripts/. .
 
       - name: Prepare Xcode
-        shell: bash
-        run: |
-          set -euo pipefail
-          if ! command -v xcodebuild >/dev/null 2>&1; then
-            echo "xcodebuild is unavailable on this Namespace runner."
-            echo "Runner OS: $(uname -a)"
-            echo "PATH: $PATH"
-            exit 1
-          fi
-          xcodebuild -version
-          xcode-select -p
-          xcodebuild -downloadComponent MetalToolchain
+        working-directory: macos-packaging
+        run: ./github_prepare_xcode.sh
 
       - name: Set up Python
         uses: actions/setup-python@v6
