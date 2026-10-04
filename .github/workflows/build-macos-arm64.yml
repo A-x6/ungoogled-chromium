@@ -15,7 +15,7 @@ permissions:
 jobs:
   build-macos-arm64:
     name: Build Apple Silicon DMG
-    runs-on: nscloud-macos-tahoe-arm64-12x56
+    runs-on: namespace-profile-macos-builde
     timeout-minutes: 360
 
     steps:
