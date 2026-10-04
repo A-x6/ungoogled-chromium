@@ -11,7 +11,7 @@ jobs:
   check:
     # do not run in forks
     if: github.repository == 'ungoogled-software/ungoogled-chromium'
-    runs-on: ubuntu-latest
+    runs-on: namespace-profile-tunguntgtungsahurbrowser
     steps:
       - name: Set maintainer groups
         id: maintainers
